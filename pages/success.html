@@ -3,32 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Thank you for contacting XDi - Your message has been successfully submitted.">
     <title>Success - XDi</title>
     <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body class="success-page">
-    <div class="success-background"></div>
+    <div class="success-background" aria-hidden="true"></div>
     
-    <div class="success-logo">XDi</div>
+    <header role="banner">
+        <a href="../index.html" class="success-logo" aria-label="XDi Home">XDi</a>
+    </header>
     
-    <div class="success-done">
-        <div class="success-checkmark">
-            <svg width="90" height="70.65" viewBox="0 0 90 70.65" fill="none">
-                <path d="M10 35.325L30 55.325L80 5.325" stroke="url(#mintGradient)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
-                <defs>
-                    <linearGradient id="mintGradient" x1="10" y1="35.325" x2="80" y2="35.325" gradientUnits="userSpaceOnUse">
-                        <stop offset="0%" stop-color="#00C8B3"/>
-                        <stop offset="100%" stop-color="#B1FFF7"/>
-                    </linearGradient>
-                </defs>
-            </svg>
+    <main role="main">
+        <div class="success-done" aria-live="polite">
+            <div class="success-checkmark" role="img" aria-label="Success checkmark">
+                <svg width="90" height="70.65" viewBox="0 0 90 70.65" fill="none" aria-hidden="true">
+                    <path d="M10 35.325L30 55.325L80 5.325" stroke="url(#mintGradient)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+                    <defs>
+                        <linearGradient id="mintGradient" x1="10" y1="35.325" x2="80" y2="35.325" gradientUnits="userSpaceOnUse">
+                            <stop offset="0%" stop-color="#00C8B3"/>
+                            <stop offset="100%" stop-color="#B1FFF7"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </div>
+            <h1 class="sr-only">Message sent successfully</h1>
         </div>
-    </div>
-    
-    <div class="success-actions">
-        <a href="../index.html" class="success-back-link">Back to Main Page</a>
-        <a href="case-study.html" class="success-showcase-link">View Showcase</a>
-    </div>
+        
+        <nav class="success-actions" aria-label="Success page navigation">
+            <a href="../index.html" class="success-back-link">Back to Main Page</a>
+            <a href="case-study.html" class="success-showcase-link">View Showcase</a>
+        </nav>
+    </main>
 
     <script src="../js/script.js"></script>
 </body>

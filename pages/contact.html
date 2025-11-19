@@ -3,38 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - XDi</title>
+    <meta name="description" content="Contact XDi - Get in touch with us for your customer-centric solutions needs.">
+    <title>Contact Us - XDi</title>
     <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body class="contact-page">
-    <div class="page-3-background"></div>
+    <div class="page-3-background" aria-hidden="true"></div>
     
-    <div class="page-3-logo">XDi</div>
+    <header role="banner">
+        <a href="../index.html" class="page-3-logo" aria-label="XDi Home">XDi</a>
+    </header>
     
-    <div class="page-3-close">
-        <a href="../index.html">
-            <svg width="22.37" height="22.37" viewBox="0 0 24 24" fill="none" stroke="rgba(255, 255, 255, 0.6)" stroke-width="2">
-                <line x1="18" y1="6" x2="6" y2="18"></line>
-                <line x1="6" y1="6" x2="18" y2="18"></line>
-            </svg>
-        </a>
-    </div>
+    <nav aria-label="Close navigation">
+        <div class="page-3-close">
+            <a href="../index.html" aria-label="Close and return to home">
+                <svg width="22.37" height="22.37" viewBox="0 0 24 24" fill="none" stroke="rgba(255, 255, 255, 0.6)" stroke-width="2" aria-hidden="true">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </a>
+        </div>
+    </nav>
 
-    <div class="page-3-search-box">
-        <div class="page-3-title">Let's Talk</div>
-        <div class="page-3-line"></div>
+    <main class="page-3-search-box" role="main">
+        <h1 class="page-3-title">Let's Talk</h1>
+        <div class="page-3-line" aria-hidden="true"></div>
         
-        <form id="contactForm" class="page-3-form">
+        <form id="contactForm" class="page-3-form" novalidate>
             <div class="page-3-content-box">
-                <textarea id="content" name="content" placeholder="Content" class="page-3-content-input"></textarea>
+                <label for="content" class="sr-only">Your message</label>
+                <textarea 
+                    id="content" 
+                    name="content" 
+                    placeholder="Tell us about your project or inquiry..." 
+                    class="page-3-content-input"
+                    required
+                    minlength="10"
+                    aria-required="true"
+                    aria-describedby="content-error"
+                ></textarea>
+                <span id="content-error" class="error-message" role="alert" aria-live="polite"></span>
             </div>
             
-            <button type="submit" class="page-3-submit-btn">
+            <button type="submit" class="page-3-submit-btn" aria-label="Submit your message">
                 <div class="page-3-submit-bg"></div>
                 <span class="page-3-submit-text">Submit</span>
+                <span class="page-3-submit-loader" aria-hidden="true"></span>
             </button>
         </form>
-    </div>
+    </main>
 
     <script src="../js/script.js"></script>
 </body>

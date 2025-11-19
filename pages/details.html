@@ -3,46 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Details - XDi</title>
+    <meta name="description" content="Complete your contact information with XDi - Provide your name and email to continue.">
+    <title>Contact Details - XDi</title>
     <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body class="details-page">
-    <div class="details-background"></div>
+    <div class="details-background" aria-hidden="true"></div>
     
-    <div class="details-logo">XDi</div>
+    <header role="banner">
+        <a href="../index.html" class="details-logo" aria-label="XDi Home">XDi</a>
+    </header>
     
-    <div class="details-close">
-        <a href="../index.html" class="details-close-link">
-            <svg width="22.37" height="22.37" viewBox="0 0 24 24" fill="none" stroke="rgba(255, 255, 255, 0.6)" stroke-width="2">
-                <line x1="18" y1="6" x2="6" y2="18"></line>
-                <line x1="6" y1="6" x2="18" y2="18"></line>
-            </svg>
-        </a>
-    </div>
-    
-    <div class="details-back">
-        <a href="contact.html" class="details-back-link">← Back</a>
-    </div>
-
-    <div class="details-search-box">
-        <div class="details-title">Let's Talk</div>
-        <div class="details-line"></div>
+    <nav aria-label="Navigation">
+        <div class="details-close">
+            <a href="../index.html" class="details-close-link" aria-label="Close and return to home">
+                <svg width="22.37" height="22.37" viewBox="0 0 24 24" fill="none" stroke="rgba(255, 255, 255, 0.6)" stroke-width="2" aria-hidden="true">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </a>
+        </div>
         
-        <form id="detailsForm" class="details-form">
+        <div class="details-back">
+            <a href="contact.html" class="details-back-link" aria-label="Go back to previous step">← Back</a>
+        </div>
+    </nav>
+
+    <main class="details-search-box" role="main">
+        <h1 class="details-title">Let's Talk</h1>
+        <div class="details-line" aria-hidden="true"></div>
+        
+        <form id="detailsForm" class="details-form" novalidate>
             <div class="details-input-group">
-                <input type="text" id="name" name="name" placeholder="Name" class="details-input" required>
+                <label for="name" class="sr-only">Your name</label>
+                <input 
+                    type="text" 
+                    id="name" 
+                    name="name" 
+                    placeholder="Name" 
+                    class="details-input" 
+                    required
+                    minlength="2"
+                    aria-required="true"
+                    aria-describedby="name-error"
+                >
+                <span id="name-error" class="error-message" role="alert" aria-live="polite"></span>
             </div>
             
             <div class="details-input-group">
-                <input type="email" id="email" name="email" placeholder="Email" class="details-input" required>
+                <label for="email" class="sr-only">Your email</label>
+                <input 
+                    type="email" 
+                    id="email" 
+                    name="email" 
+                    placeholder="Email" 
+                    class="details-input" 
+                    required
+                    aria-required="true"
+                    aria-describedby="email-error"
+                >
+                <span id="email-error" class="error-message" role="alert" aria-live="polite"></span>
             </div>
             
-            <button type="submit" class="details-submit-btn">
+            <button type="submit" class="details-submit-btn" aria-label="Submit your information">
                 <div class="details-submit-bg"></div>
                 <span class="details-submit-text">Submit</span>
+                <span class="details-submit-loader" aria-hidden="true"></span>
             </button>
         </form>
-    </div>
+    </main>
 
     <script src="../js/script.js"></script>
 </body>

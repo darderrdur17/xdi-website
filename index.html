@@ -3,50 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="XDi - Customer Centric Solutions. Discover our innovative services, case studies, and contact us for your next project.">
+    <meta name="keywords" content="XDi, customer solutions, web design, digital services, case studies">
+    <meta name="author" content="XDi">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://xdi-website.vercel.app/">
+    <meta property="og:title" content="XDi - Customer Centric Solutions">
+    <meta property="og:description" content="Discover innovative customer-centric solutions and services">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://xdi-website.vercel.app/">
+    <meta property="twitter:title" content="XDi - Customer Centric Solutions">
+    <meta property="twitter:description" content="Discover innovative customer-centric solutions and services">
+    
     <title>XDi - Customer Centric Solutions</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
 <body>
-    <div class="background-blur"></div>
+    <div class="background-blur" aria-hidden="true"></div>
     
-    <header>
-        <div class="logo">XDi</div>
+    <header role="banner">
+        <a href="/" class="logo" aria-label="XDi Home">XDi</a>
     </header>
 
-    <main class="landing-content">
+    <main class="landing-content" role="main">
         <h1 class="main-title">
             <span class="title-orange">CUSTOMER</span>
             <span class="title-white"> CENTRIC SOLUTIONS</span>
         </h1>
 
-        <div class="menu-container">
+        <nav class="menu-container" aria-label="Main navigation">
             <div class="dropdown-menu">
-                <div class="search-bar" id="searchBar">
-                    <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <div class="search-bar" id="searchBar" role="search">
+                    <label for="searchInput" class="sr-only">Search navigation</label>
+                    <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
                         <circle cx="11" cy="11" r="8"></circle>
                         <path d="m21 21-4.35-4.35"></path>
                     </svg>
-                    <input type="text" id="searchInput" placeholder="Search..." autocomplete="off">
-                    <button class="clear-btn" id="clearBtn" style="display: none;">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <input 
+                        type="text" 
+                        id="searchInput" 
+                        placeholder="Search..." 
+                        autocomplete="off"
+                        aria-label="Search navigation items"
+                    >
+                    <button 
+                        class="clear-btn" 
+                        id="clearBtn" 
+                        aria-label="Clear search"
+                        style="display: none;"
+                    >
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
                             <line x1="18" y1="6" x2="6" y2="18"></line>
                             <line x1="6" y1="6" x2="18" y2="18"></line>
                         </svg>
                     </button>
                 </div>
-                <div class="dropdown-content" id="dropdownContent">
-                    <a href="pages/case-study.html" class="dropdown-item">
+                <div class="dropdown-content" id="dropdownContent" role="list">
+                    <a href="pages/case-study.html" class="dropdown-item" role="listitem">
                         <span class="item-prefix">XDi</span> Case study
                     </a>
-                    <a href="pages/service.html" class="dropdown-item">
+                    <a href="pages/service.html" class="dropdown-item" role="listitem">
                         <span class="item-prefix">XDi</span> Service
                     </a>
-                    <a href="pages/contact.html" class="dropdown-item">
+                    <a href="pages/contact.html" class="dropdown-item" role="listitem">
                         <span class="item-prefix">XDi</span> Contact
                     </a>
                 </div>
             </div>
-        </div>
+        </nav>
     </main>
 
     <script src="js/script.js"></script>
