@@ -635,6 +635,14 @@ header {
     font-family: var(--font-family-primary);
 }
 
+/* Hero Menu Container */
+.hero-menu-container {
+    width: 100%;
+    max-width: 500px;
+    margin-top: 3rem;
+    animation: fadeInUp 0.8s ease-out 1.5s both;
+}
+
 /* Services Preview Section */
 .services-preview {
     width: 100%;

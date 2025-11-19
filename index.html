@@ -99,20 +99,46 @@
                     Crafting digital experiences that captivate your audience and drive extraordinary results.
                 </p>
 
-                <div class="hero-stats">
-                    <div class="stat-item">
-                        <span class="stat-number">500+</span>
-                        <span class="stat-label">Projects Delivered</span>
+                <nav class="hero-menu-container" aria-label="Main navigation">
+                    <div class="dropdown-menu">
+                        <div class="search-bar" id="searchBar" role="search">
+                            <label for="searchInput" class="sr-only">Search navigation</label>
+                            <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <path d="m21 21-4.35-4.35"></path>
+                            </svg>
+                            <input
+                                type="text"
+                                id="searchInput"
+                                placeholder="Explore our services..."
+                                autocomplete="off"
+                                aria-label="Search navigation items"
+                            >
+                            <button
+                                class="clear-btn"
+                                id="clearBtn"
+                                aria-label="Clear search"
+                                style="display: none;"
+                            >
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="dropdown-content" id="dropdownContent" role="list">
+                            <a href="pages/service.html" class="dropdown-item" role="listitem">
+                                <span class="item-prefix">XDi</span> Services
+                            </a>
+                            <a href="pages/case-study.html" class="dropdown-item" role="listitem">
+                                <span class="item-prefix">XDi</span> Case Studies
+                            </a>
+                            <a href="pages/contact.html" class="dropdown-item" role="listitem">
+                                <span class="item-prefix">XDi</span> Contact
+                            </a>
+                        </div>
                     </div>
-                    <div class="stat-item">
-                        <span class="stat-number">98%</span>
-                        <span class="stat-label">Client Satisfaction</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number">5+</span>
-                        <span class="stat-label">Years Experience</span>
-                    </div>
-                </div>
+                </nav>
             </div>
 
             <div class="scroll-indicator" aria-hidden="true">
@@ -209,47 +235,6 @@
                 </div>
             </div>
         </section>
-
-        <nav class="menu-container" aria-label="Main navigation">
-            <div class="dropdown-menu">
-                <div class="search-bar" id="searchBar" role="search">
-                    <label for="searchInput" class="sr-only">Search navigation</label>
-                    <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                        <circle cx="11" cy="11" r="8"></circle>
-                        <path d="m21 21-4.35-4.35"></path>
-                    </svg>
-                    <input
-                        type="text"
-                        id="searchInput"
-                        placeholder="Explore our services..."
-                        autocomplete="off"
-                        aria-label="Search navigation items"
-                    >
-                    <button
-                        class="clear-btn"
-                        id="clearBtn"
-                        aria-label="Clear search"
-                        style="display: none;"
-                    >
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                            <line x1="18" y1="6" x2="6" y2="18"></line>
-                            <line x1="6" y1="6" x2="18" y2="18"></line>
-                        </svg>
-                    </button>
-                </div>
-                <div class="dropdown-content" id="dropdownContent" role="list">
-                    <a href="pages/service.html" class="dropdown-item" role="listitem">
-                        <span class="item-prefix">XDi</span> Services
-                    </a>
-                    <a href="pages/case-study.html" class="dropdown-item" role="listitem">
-                        <span class="item-prefix">XDi</span> Case Studies
-                    </a>
-                    <a href="pages/contact.html" class="dropdown-item" role="listitem">
-                        <span class="item-prefix">XDi</span> Contact
-                    </a>
-                </div>
-            </div>
-        </nav>
 
         <section class="cta-section">
             <div class="cta-content">
