@@ -15,31 +15,21 @@
 
     <header role="banner">
         <a href="../index.html" class="logo" aria-label="XDi Home">XDi</a>
-        <nav aria-label="Close navigation">
-            <a href="../index.html" class="page-close-btn" aria-label="Close and return to home">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgba(255, 255, 255, 0.6)" stroke-width="2">
-                    <line x1="18" y1="6" x2="6" y2="18"></line>
-                    <line x1="6" y1="6" x2="18" y2="18"></line>
-                </svg>
-            </a>
-        </nav>
     </header>
 
-    <main class="page-container" role="main">
-        <a href="../index.html" class="back-button" aria-label="Back to home">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                <path d="M19 12H5M12 19l-7-7 7-7"/>
-            </svg>
-            Back to Home
-        </a>
+    <main class="landing-content" role="main">
+        <section class="contact-hero-section">
+            <div class="hero-content">
+                <h1 class="main-title">
+                    <span class="title-orange">LET'S</span>
+                    <span class="title-white"> TALK</span>
+                </h1>
 
-        <div class="page-hero">
-            <h1 class="page-title">Let's Talk</h1>
-            <p class="page-subtitle">
-                Ready to start your next project? We'd love to hear about your ideas and how we can help bring them to life.
-                Share your vision with us and let's create something amazing together.
-            </p>
-        </div>
+                <p class="hero-subtitle">
+                    Ready to start your project? Share your vision and let's create something amazing.
+                </p>
+            </div>
+        </section>
 
         <div class="contact-form-section">
             <div class="contact-form-container">
@@ -49,7 +39,7 @@
                         <textarea
                             id="content"
                             name="content"
-                            placeholder="Hi, I'd like to discuss a project about..."
+                            placeholder="Tell us about your project..."
                             class="form-textarea"
                             required
                             minlength="10"
@@ -115,31 +105,58 @@
             </div>
         </div>
 
-        <section class="contact-process">
-            <div class="process-container">
-                <h2>Our Process</h2>
-                <div class="process-steps">
-                    <div class="process-step">
-                        <div class="step-number">1</div>
-                        <h4>Discovery</h4>
-                        <p>We learn about your goals, audience, and challenges</p>
-                    </div>
-                    <div class="process-step">
-                        <div class="step-number">2</div>
-                        <h4>Strategy</h4>
-                        <p>We develop a tailored approach to your project</p>
-                    </div>
-                    <div class="process-step">
-                        <div class="step-number">3</div>
-                        <h4>Creation</h4>
-                        <p>We bring your vision to life with expert craftsmanship</p>
-                    </div>
-                    <div class="process-step">
-                        <div class="step-number">4</div>
-                        <h4>Launch</h4>
-                        <p>We ensure successful deployment and continued support</p>
-                    </div>
+        <nav class="menu-container" aria-label="Main navigation">
+            <div class="dropdown-menu">
+                <div class="search-bar" id="searchBar" role="search">
+                    <label for="searchInput" class="sr-only">Search navigation</label>
+                    <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                    <input
+                        type="text"
+                        id="searchInput"
+                        placeholder="Explore our services..."
+                        autocomplete="off"
+                        aria-label="Search navigation items"
+                    >
+                    <button
+                        class="clear-btn"
+                        id="clearBtn"
+                        aria-label="Clear search"
+                        style="display: none;"
+                    >
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                        </svg>
+                    </button>
                 </div>
+                <div class="dropdown-content" id="dropdownContent" role="list">
+                    <a href="../index.html" class="dropdown-item" role="listitem">
+                        <span class="item-prefix">XDi</span> Home
+                    </a>
+                    <a href="service.html" class="dropdown-item" role="listitem">
+                        <span class="item-prefix">XDi</span> Services
+                    </a>
+                    <a href="contact.html" class="dropdown-item active" role="listitem">
+                        <span class="item-prefix">XDi</span> Contact
+                    </a>
+                </div>
+            </div>
+        </nav>
+
+        <section class="cta-section">
+            <div class="cta-content">
+                <h2>Need More Information?</h2>
+                <p>Check out our services or return to the homepage to learn more about our work.</p>
+                <a href="service.html" class="cta-button">
+                    <span>View Services</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14"/>
+                        <path d="m12 5 7 7-7 7"/>
+                    </svg>
+                </a>
             </div>
         </section>
     </main>

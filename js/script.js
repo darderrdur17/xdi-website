@@ -50,6 +50,51 @@ function setLoadingState(button, isLoading) {
     }
 }
 
+/**
+ * Show success message
+ */
+function showSuccessMessage(message) {
+    const form = document.getElementById('contactForm');
+    const formContainer = form.parentElement;
+
+    // Hide form and show success message
+    form.style.display = 'none';
+
+    const successDiv = document.createElement('div');
+    successDiv.className = 'contact-success-message';
+    successDiv.innerHTML = `
+        <div class="success-checkmark">
+            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#ff6b35" stroke-width="2">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                <polyline points="22,4 12,14.01 9,11.01"/>
+            </svg>
+        </div>
+        <h3>Message Sent Successfully!</h3>
+        <p>${message}</p>
+        <button onclick="resetContactForm()" class="reset-btn">Send Another Message</button>
+    `;
+
+    formContainer.appendChild(successDiv);
+}
+
+/**
+ * Reset contact form
+ */
+function resetContactForm() {
+    const form = document.getElementById('contactForm');
+    const successMessage = document.querySelector('.contact-success-message');
+
+    if (successMessage) {
+        successMessage.remove();
+    }
+
+    form.style.display = 'block';
+    form.reset();
+
+    // Clear session storage
+    sessionStorage.removeItem('contactContent');
+}
+
 // ============================================
 // SEARCH FUNCTIONALITY
 // ============================================
@@ -214,8 +259,8 @@ if (contactForm) {
             // Simulate API call delay for better UX
             await new Promise(resolve => setTimeout(resolve, 500));
 
-            // Navigate to details page
-            window.location.href = 'details.html';
+            // Show success message
+            showSuccessMessage('Thank you! We\'ll be in touch within 24 hours.');
         } catch (error) {
             console.error('Form submission error:', error);
             showError('content', 'An error occurred. Please try again.');
@@ -224,148 +269,12 @@ if (contactForm) {
     });
 }
 
-// ============================================
-// DETAILS FORM HANDLING
-// ============================================
-
-const detailsForm = document.getElementById('detailsForm');
-if (detailsForm) {
-    const nameInput = document.getElementById('name');
-    const emailInput = document.getElementById('email');
-    const submitBtn = detailsForm.querySelector('.details-submit-btn');
-
-    // Real-time validation
-    if (nameInput) {
-        nameInput.addEventListener('input', function() {
-            const value = this.value.trim();
-            if (value.length > 0 && value.length < 2) {
-                showError('name', 'Name must be at least 2 characters');
-            } else {
-                clearError('name');
-            }
-        });
-
-        nameInput.addEventListener('blur', function() {
-            validateDetailsForm();
-        });
-    }
-
-    if (emailInput) {
-        emailInput.addEventListener('input', function() {
-            const value = this.value.trim();
-            if (value && !isValidEmail(value)) {
-                showError('email', 'Please enter a valid email address');
-            } else {
-                clearError('email');
-            }
-        });
-
-        emailInput.addEventListener('blur', function() {
-            validateDetailsForm();
-        });
-    }
-
-    /**
-     * Validate details form
-     */
-    function validateDetailsForm() {
-        const name = nameInput.value.trim();
-        const email = emailInput.value.trim();
-        let isValid = true;
-
-        clearError('name');
-        clearError('email');
-
-        if (!name) {
-            showError('name', 'Please enter your name');
-            isValid = false;
-        } else if (name.length < 2) {
-            showError('name', 'Name must be at least 2 characters long');
-            isValid = false;
-        }
-
-        if (!email) {
-            showError('email', 'Please enter your email address');
-            isValid = false;
-        } else if (!isValidEmail(email)) {
-            showError('email', 'Please enter a valid email address');
-            isValid = false;
-        }
-
-        return isValid;
-    }
-
-    // Form submission
-    detailsForm.addEventListener('submit', async function(e) {
-        e.preventDefault();
-
-        if (!validateDetailsForm()) {
-            // Focus first invalid field
-            if (!nameInput.value.trim() || nameInput.value.trim().length < 2) {
-                nameInput.focus();
-            } else if (!emailInput.value.trim() || !isValidEmail(emailInput.value.trim())) {
-                emailInput.focus();
-            }
-            return;
-        }
-
-        setLoadingState(submitBtn, true);
-
-        try {
-            // Get form data
-            const formData = new FormData(this);
-            const name = formData.get('name').trim();
-            const email = formData.get('email').trim();
-
-            // Store data in sessionStorage
-            sessionStorage.setItem('contactName', name);
-            sessionStorage.setItem('contactEmail', email);
-
-            // Simulate API call delay
-            await new Promise(resolve => setTimeout(resolve, 500));
-
-            // Navigate to success page
-            window.location.href = 'success.html';
-        } catch (error) {
-            console.error('Form submission error:', error);
-            showError('email', 'An error occurred. Please try again.');
-            setLoadingState(submitBtn, false);
-        }
-    });
-
-    // Handle back navigation warning
-    const backLinks = document.querySelectorAll('.details-back-link, .details-close-link');
-    backLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            if ((nameInput && nameInput.value.trim()) || (emailInput && emailInput.value.trim())) {
-                const confirmed = confirm('Are you sure you want to go back? Your inquiries will be removed.');
-                if (!confirmed) {
-                    e.preventDefault();
-                } else {
-                    // Clear form data
-                    sessionStorage.removeItem('contactContent');
-                    sessionStorage.removeItem('contactName');
-                    sessionStorage.removeItem('contactEmail');
-                }
-            }
-        });
-    });
-}
 
 // ============================================
 // PAGE INITIALIZATION
 // ============================================
 
 window.addEventListener('DOMContentLoaded', function() {
-    // Check if user came from contact page
-    if (window.location.pathname.includes('details.html')) {
-        const storedContent = sessionStorage.getItem('contactContent');
-        if (!storedContent) {
-            // Redirect to contact page if no content stored
-            window.location.href = 'contact.html';
-        }
-    }
-
     // Add fade-in animation to page content
     document.body.style.opacity = '0';
     requestAnimationFrame(() => {
