@@ -521,8 +521,8 @@ header {
 /* Hero Section */
 .hero-section {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
     min-height: 100vh;
     text-align: center;
     width: 100%;
@@ -637,10 +637,26 @@ header {
 
 /* Hero Menu Container */
 .hero-menu-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
     width: 100%;
-    max-width: 500px;
-    margin-top: 3rem;
     animation: fadeInUp 0.8s ease-out 1.5s both;
+}
+
+.hero-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+}
+
+.hero-bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
 }
 
 /* Services Preview Section */
