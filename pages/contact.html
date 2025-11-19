@@ -32,16 +32,18 @@
         <form id="contactForm" class="page-3-form" novalidate>
             <div class="page-3-content-box">
                 <label for="content" class="sr-only">Your message</label>
-                <textarea 
+                <input 
+                    type="text" 
                     id="content" 
                     name="content" 
-                    placeholder="Tell us about your project or inquiry..." 
+                    placeholder="Hi," 
                     class="page-3-content-input"
                     required
-                    minlength="10"
+                    minlength="3"
                     aria-required="true"
                     aria-describedby="content-error"
-                ></textarea>
+                    autocomplete="off"
+                >
                 <span id="content-error" class="error-message" role="alert" aria-live="polite"></span>
             </div>
             

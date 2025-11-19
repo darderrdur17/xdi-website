@@ -158,8 +158,8 @@ if (contactForm) {
     if (contentInput) {
         contentInput.addEventListener('input', function() {
             const value = this.value.trim();
-            if (value.length > 0 && value.length < 10) {
-                showError('content', 'Please provide at least 10 characters');
+            if (value.length > 0 && value.length < 3) {
+                showError('content', 'Please provide at least 3 characters');
             } else {
                 clearError('content');
             }
@@ -182,8 +182,8 @@ if (contactForm) {
         if (!content) {
             showError('content', 'Please enter your message');
             isValid = false;
-        } else if (content.length < 10) {
-            showError('content', 'Message must be at least 10 characters long');
+        } else if (content.length < 3) {
+            showError('content', 'Message must be at least 3 characters long');
             isValid = false;
         }
 
