@@ -6,6 +6,7 @@ A modern, responsive website for XDi showcasing customer-centric solutions and s
 
 - **Landing Page**: Interactive search-based navigation with hero section
 - **Services Page**: Comprehensive service offerings with detailed descriptions
+- **Case Studies Page**: Portfolio showcase with detailed project results and metrics
 - **Contact Page**: Single-page contact form with instant feedback
 
 ## 📁 Project Structure
@@ -14,6 +15,7 @@ A modern, responsive website for XDi showcasing customer-centric solutions and s
 /
 ├── index.html          # Main landing page
 ├── pages/              # Core pages
+│   ├── case-study.html # Case studies portfolio
 │   ├── contact.html    # Contact form
 │   └── service.html    # Services showcase
 ├── css/                # Stylesheets
