@@ -4,54 +4,179 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="XDi Services - UI/UX Design, Brand Identity, Web Development, Digital Strategy, and more.">
+    <meta name="keywords" content="XDi, services, UI/UX design, web development, brand identity, digital strategy, consulting">
+    <meta name="author" content="XDi">
     <title>Our Services - XDi</title>
     <link rel="stylesheet" href="../css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="background-blur"></div>
-    
-    <header>
-        <div class="logo">XDi</div>
-        <a href="../index.html" class="close-btn" style="position: absolute; top: 2rem; right: 3rem; color: #fff; text-decoration: none; font-size: 1.5rem; font-weight: 300;">×</a>
+    <div class="background-blur" aria-hidden="true"></div>
+
+    <header role="banner">
+        <a href="../index.html" class="logo" aria-label="XDi Home">XDi</a>
+        <nav aria-label="Close navigation">
+            <a href="../index.html" class="page-close-btn" aria-label="Close and return to home">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgba(255, 255, 255, 0.6)" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </a>
+        </nav>
     </header>
 
-    <div class="page-container">
-        <a href="../index.html" class="back-button">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+    <main class="page-container" role="main">
+        <a href="../index.html" class="back-button" aria-label="Back to home">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
             </svg>
-            Back
+            Back to Home
         </a>
-        
-        <h1 class="page-title">Our Services</h1>
 
-        <div class="service-grid">
-            <div class="service-card">
-                <h3>UI/UX Design</h3>
-                <p>Creating intuitive and engaging user experiences through thoughtful design and user research. We craft interfaces that users love to interact with.</p>
+        <div class="page-hero">
+            <h1 class="page-title">Our Services</h1>
+            <p class="page-subtitle">
+                Comprehensive digital solutions crafted to transform your business and delight your customers.
+                From strategy to execution, we deliver results that matter.
+            </p>
+        </div>
+
+        <div class="services-showcase">
+            <div class="service-showcase-card">
+                <div class="service-showcase-icon">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#ff6b35" stroke-width="2">
+                        <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                        <line x1="8" y1="21" x2="16" y2="21"/>
+                        <line x1="12" y1="17" x2="12" y2="21"/>
+                    </svg>
+                </div>
+                <div class="service-showcase-content">
+                    <h3>UI/UX Design</h3>
+                    <p>Creating intuitive and engaging user experiences through thoughtful design and user research. We craft interfaces that users love to interact with, combining aesthetics with functionality.</p>
+                    <ul class="service-features">
+                        <li>User Research & Analysis</li>
+                        <li>Wireframing & Prototyping</li>
+                        <li>Interaction Design</li>
+                        <li>Usability Testing</li>
+                    </ul>
+                </div>
             </div>
-            <div class="service-card">
-                <h3>Brand Identity</h3>
-                <p>Developing comprehensive brand identities that resonate with your target audience and communicate your unique value proposition effectively.</p>
+
+            <div class="service-showcase-card">
+                <div class="service-showcase-icon">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#ff6b35" stroke-width="2">
+                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                    </svg>
+                </div>
+                <div class="service-showcase-content">
+                    <h3>Brand Identity</h3>
+                    <p>Developing comprehensive brand identities that resonate with your target audience and communicate your unique value proposition effectively.</p>
+                    <ul class="service-features">
+                        <li>Logo Design</li>
+                        <li>Brand Guidelines</li>
+                        <li>Visual Identity Systems</li>
+                        <li>Brand Strategy</li>
+                    </ul>
+                </div>
             </div>
-            <div class="service-card">
-                <h3>Web Development</h3>
-                <p>Building responsive, modern websites that perform flawlessly across all devices and platforms, using the latest web technologies.</p>
+
+            <div class="service-showcase-card">
+                <div class="service-showcase-icon">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#ff6b35" stroke-width="2">
+                        <rect x="3" y="4" width="18" height="12" rx="2"/>
+                        <path d="M7 20h10"/>
+                        <path d="M9 16v4"/>
+                        <path d="M15 16v4"/>
+                    </svg>
+                </div>
+                <div class="service-showcase-content">
+                    <h3>Web Development</h3>
+                    <p>Building responsive, modern websites that perform flawlessly across all devices and platforms, using the latest web technologies.</p>
+                    <ul class="service-features">
+                        <li>Responsive Design</li>
+                        <li>Performance Optimization</li>
+                        <li>E-commerce Solutions</li>
+                        <li>CMS Integration</li>
+                    </ul>
+                </div>
             </div>
-            <div class="service-card">
-                <h3>Digital Strategy</h3>
-                <p>Strategic planning and consultation to help your business thrive in the digital landscape with data-driven insights and solutions.</p>
+
+            <div class="service-showcase-card">
+                <div class="service-showcase-icon">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#ff6b35" stroke-width="2">
+                        <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                        <polyline points="7.5,4.5 16.5,9.5"/>
+                        <polyline points="7.5,9.5 16.5,4.5"/>
+                    </svg>
+                </div>
+                <div class="service-showcase-content">
+                    <h3>Digital Strategy</h3>
+                    <p>Strategic planning and consultation to help your business thrive in the digital landscape with data-driven insights and solutions.</p>
+                    <ul class="service-features">
+                        <li>Market Analysis</li>
+                        <li>Growth Strategy</li>
+                        <li>Digital Transformation</li>
+                        <li>ROI Optimization</li>
+                    </ul>
+                </div>
             </div>
-            <div class="service-card">
-                <h3>Product Design</h3>
-                <p>End-to-end product design services from concept to launch, ensuring your product meets user needs and business goals.</p>
+
+            <div class="service-showcase-card">
+                <div class="service-showcase-icon">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#ff6b35" stroke-width="2">
+                        <circle cx="12" cy="12" r="3"/>
+                        <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1 1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+                    </svg>
+                </div>
+                <div class="service-showcase-content">
+                    <h3>Product Design</h3>
+                    <p>End-to-end product design services from concept to launch, ensuring your product meets user needs and business goals.</p>
+                    <ul class="service-features">
+                        <li>Product Strategy</li>
+                        <li>User Journey Mapping</li>
+                        <li>MVP Development</li>
+                        <li>Launch Support</li>
+                    </ul>
+                </div>
             </div>
-            <div class="service-card">
-                <h3>Consulting</h3>
-                <p>Expert consultation on design systems, user experience optimization, and digital transformation strategies for your organization.</p>
+
+            <div class="service-showcase-card">
+                <div class="service-showcase-icon">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#ff6b35" stroke-width="2">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                        <polyline points="14,2 14,8 20,8"/>
+                        <line x1="16" y1="13" x2="8" y2="13"/>
+                        <line x1="16" y1="17" x2="8" y2="17"/>
+                        <polyline points="10,9 9,9 8,9"/>
+                    </svg>
+                </div>
+                <div class="service-showcase-content">
+                    <h3>Consulting</h3>
+                    <p>Expert consultation on design systems, user experience optimization, and digital transformation strategies for your organization.</p>
+                    <ul class="service-features">
+                        <li>Design Systems</li>
+                        <li>UX Audits</li>
+                        <li>Team Training</li>
+                        <li>Technology Roadmap</li>
+                    </ul>
+                </div>
             </div>
         </div>
-    </div>
+
+        <section class="service-cta">
+            <div class="service-cta-content">
+                <h2>Ready to Transform Your Business?</h2>
+                <p>Let's discuss how our services can help you achieve your goals and drive meaningful results.</p>
+                <a href="contact.html" class="service-cta-button">
+                    <span>Start Your Project</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14"/>
+                        <path d="m12 5 7 7-7 7"/>
+                    </svg>
+                </a>
+            </div>
+        </section>
+    </main>
 
     <script src="../js/script.js"></script>
 </body>

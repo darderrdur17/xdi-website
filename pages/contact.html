@@ -4,55 +4,144 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Contact XDi - Get in touch with us for your customer-centric solutions needs.">
+    <meta name="keywords" content="XDi, contact, get in touch, customer solutions, project inquiry">
+    <meta name="author" content="XDi">
     <title>Contact Us - XDi</title>
     <link rel="stylesheet" href="../css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<body class="contact-page">
-    <div class="page-3-background" aria-hidden="true"></div>
-    
+<body>
+    <div class="background-blur" aria-hidden="true"></div>
+
     <header role="banner">
-        <a href="../index.html" class="page-3-logo" aria-label="XDi Home">XDi</a>
-    </header>
-    
-    <nav aria-label="Close navigation">
-        <div class="page-3-close">
-            <a href="../index.html" aria-label="Close and return to home">
-                <svg width="22.37" height="22.37" viewBox="0 0 24 24" fill="none" stroke="rgba(255, 255, 255, 0.6)" stroke-width="2" aria-hidden="true">
+        <a href="../index.html" class="logo" aria-label="XDi Home">XDi</a>
+        <nav aria-label="Close navigation">
+            <a href="../index.html" class="page-close-btn" aria-label="Close and return to home">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgba(255, 255, 255, 0.6)" stroke-width="2">
                     <line x1="18" y1="6" x2="6" y2="18"></line>
                     <line x1="6" y1="6" x2="18" y2="18"></line>
                 </svg>
             </a>
-        </div>
-    </nav>
+        </nav>
+    </header>
 
-    <main class="page-3-search-box" role="main">
-        <h1 class="page-3-title">Let's Talk</h1>
-        <div class="page-3-line" aria-hidden="true"></div>
-        
-        <form id="contactForm" class="page-3-form" novalidate>
-            <div class="page-3-content-box">
-                <label for="content" class="sr-only">Your message</label>
-                <input 
-                    type="text" 
-                    id="content" 
-                    name="content" 
-                    placeholder="Hi," 
-                    class="page-3-content-input"
-                    required
-                    minlength="3"
-                    aria-required="true"
-                    aria-describedby="content-error"
-                    autocomplete="off"
-                >
-                <span id="content-error" class="error-message" role="alert" aria-live="polite"></span>
+    <main class="page-container" role="main">
+        <a href="../index.html" class="back-button" aria-label="Back to home">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+            </svg>
+            Back to Home
+        </a>
+
+        <div class="page-hero">
+            <h1 class="page-title">Let's Talk</h1>
+            <p class="page-subtitle">
+                Ready to start your next project? We'd love to hear about your ideas and how we can help bring them to life.
+                Share your vision with us and let's create something amazing together.
+            </p>
+        </div>
+
+        <div class="contact-form-section">
+            <div class="contact-form-container">
+                <form id="contactForm" class="contact-form-professional" novalidate>
+                    <div class="form-group">
+                        <label for="content" class="form-label">Tell us about your project</label>
+                        <textarea
+                            id="content"
+                            name="content"
+                            placeholder="Hi, I'd like to discuss a project about..."
+                            class="form-textarea"
+                            required
+                            minlength="10"
+                            rows="6"
+                            aria-required="true"
+                            aria-describedby="content-error"
+                        ></textarea>
+                        <span id="content-error" class="error-message" role="alert" aria-live="polite"></span>
+                    </div>
+
+                    <button type="submit" class="contact-submit-btn" aria-label="Submit your message">
+                        <span class="btn-text">Send Message</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="btn-icon">
+                            <path d="M5 12h14"/>
+                            <path d="m12 5 7 7-7 7"/>
+                        </svg>
+                        <span class="submit-loader" aria-hidden="true"></span>
+                    </button>
+                </form>
+
+                <div class="contact-info">
+                    <div class="contact-info-item">
+                        <div class="info-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ff6b35" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                <polyline points="22,6 12,13 2,6"/>
+                            </svg>
+                        </div>
+                        <div class="info-content">
+                            <h4>Quick Response</h4>
+                            <p>We typically respond within 24 hours</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-item">
+                        <div class="info-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ff6b35" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <polyline points="12,6 12,12 16,14"/>
+                            </svg>
+                        </div>
+                        <div class="info-content">
+                            <h4>Project Timeline</h4>
+                            <p>Let's discuss your timeline and requirements</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-item">
+                        <div class="info-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ff6b35" stroke-width="2">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                                <circle cx="9" cy="7" r="4"/>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                            </svg>
+                        </div>
+                        <div class="info-content">
+                            <h4>Dedicated Team</h4>
+                            <p>Your project gets our full attention</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            
-            <button type="submit" class="page-3-submit-btn" aria-label="Submit your message">
-                <div class="page-3-submit-bg"></div>
-                <span class="page-3-submit-text">Submit</span>
-                <span class="page-3-submit-loader" aria-hidden="true"></span>
-            </button>
-        </form>
+        </div>
+
+        <section class="contact-process">
+            <div class="process-container">
+                <h2>Our Process</h2>
+                <div class="process-steps">
+                    <div class="process-step">
+                        <div class="step-number">1</div>
+                        <h4>Discovery</h4>
+                        <p>We learn about your goals, audience, and challenges</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">2</div>
+                        <h4>Strategy</h4>
+                        <p>We develop a tailored approach to your project</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">3</div>
+                        <h4>Creation</h4>
+                        <p>We bring your vision to life with expert craftsmanship</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">4</div>
+                        <h4>Launch</h4>
+                        <p>We ensure successful deployment and continued support</p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <script src="../js/script.js"></script>

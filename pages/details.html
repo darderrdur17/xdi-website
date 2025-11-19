@@ -4,76 +4,181 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Complete your contact information with XDi - Provide your name and email to continue.">
+    <meta name="keywords" content="XDi, contact details, name, email, project inquiry">
+    <meta name="author" content="XDi">
     <title>Contact Details - XDi</title>
     <link rel="stylesheet" href="../css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<body class="details-page">
-    <div class="details-background" aria-hidden="true"></div>
-    
+<body>
+    <div class="background-blur" aria-hidden="true"></div>
+
     <header role="banner">
-        <a href="../index.html" class="details-logo" aria-label="XDi Home">XDi</a>
-    </header>
-    
-    <nav aria-label="Navigation">
-        <div class="details-close">
-            <a href="../index.html" class="details-close-link" aria-label="Close and return to home">
-                <svg width="22.37" height="22.37" viewBox="0 0 24 24" fill="none" stroke="rgba(255, 255, 255, 0.6)" stroke-width="2" aria-hidden="true">
+        <a href="../index.html" class="logo" aria-label="XDi Home">XDi</a>
+        <nav aria-label="Close navigation">
+            <a href="../index.html" class="page-close-btn" aria-label="Close and return to home">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgba(255, 255, 255, 0.6)" stroke-width="2">
                     <line x1="18" y1="6" x2="6" y2="18"></line>
                     <line x1="6" y1="6" x2="18" y2="18"></line>
                 </svg>
             </a>
-        </div>
-        
-        <div class="details-back">
-            <a href="contact.html" class="details-back-link" aria-label="Go back to previous step">← Back</a>
-        </div>
-    </nav>
+        </nav>
+    </header>
 
-    <main class="details-search-box" role="main">
-        <h1 class="details-title">Let's Talk</h1>
-        <div class="details-line" aria-hidden="true"></div>
-        
-        <form id="detailsForm" class="details-form" novalidate>
-            <div class="details-input-group">
-                <label for="name" class="sr-only">Your name</label>
-                <input 
-                    type="text" 
-                    id="name" 
-                    name="name" 
-                    placeholder="Name" 
-                    class="details-input" 
-                    required
-                    minlength="2"
-                    aria-required="true"
-                    aria-describedby="name-error"
-                >
-                <span id="name-error" class="error-message" role="alert" aria-live="polite"></span>
+    <main class="page-container" role="main">
+        <div class="details-navigation">
+            <a href="contact.html" class="details-back-link" aria-label="Go back to previous step">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="M19 12H5M12 19l-7-7 7-7"/>
+                </svg>
+                Back to Message
+            </a>
+        </div>
+
+        <div class="page-hero">
+            <h1 class="page-title">Your Details</h1>
+            <p class="page-subtitle">
+                Almost there! Just a few more details so we can get back to you with a personalized response.
+                Your information is secure and will only be used to communicate about your project.
+            </p>
+        </div>
+
+        <div class="details-form-section">
+            <div class="details-form-container">
+                <form id="detailsForm" class="details-form-professional" novalidate>
+                    <div class="form-group">
+                        <label for="name" class="form-label">Full Name</label>
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            placeholder="Enter your full name"
+                            class="form-input"
+                            required
+                            minlength="2"
+                            aria-required="true"
+                            aria-describedby="name-error"
+                        >
+                        <span id="name-error" class="error-message" role="alert" aria-live="polite"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email Address</label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Enter your email address"
+                            class="form-input"
+                            required
+                            aria-required="true"
+                            aria-describedby="email-error"
+                        >
+                        <span id="email-error" class="error-message" role="alert" aria-live="polite"></span>
+                    </div>
+
+                    <button type="submit" class="details-submit-btn-professional" aria-label="Submit your information">
+                        <span class="btn-text">Complete Submission</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="btn-icon">
+                            <path d="M5 12h14"/>
+                            <path d="m12 5 7 7-7 7"/>
+                        </svg>
+                        <span class="submit-loader" aria-hidden="true"></span>
+                    </button>
+                </form>
+
+                <div class="details-info">
+                    <div class="details-info-item">
+                        <div class="info-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ff6b35" stroke-width="2">
+                                <path d="M12 15V9m0 0L9 12m3-3l3 3m2 6H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5.586a1 1 0 0 1 .707.293l5.414 5.414a1 1 0 0 1 .293.707V19a2 2 0 0 1-2 2z"/>
+                            </svg>
+                        </div>
+                        <div class="info-content">
+                            <h4>Secure & Private</h4>
+                            <p>Your information is encrypted and secure</p>
+                        </div>
+                    </div>
+
+                    <div class="details-info-item">
+                        <div class="info-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ff6b35" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <polyline points="12,6 12,12 16,14"/>
+                            </svg>
+                        </div>
+                        <div class="info-content">
+                            <h4>Quick Response</h4>
+                            <p>Expect a response within 24 hours</p>
+                        </div>
+                    </div>
+
+                    <div class="details-info-item">
+                        <div class="info-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ff6b35" stroke-width="2">
+                                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                        </div>
+                        <div class="info-content">
+                            <h4>No Spam</h4>
+                            <p>We only send relevant project updates</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            
-            <div class="details-input-group">
-                <label for="email" class="sr-only">Your email</label>
-                <input 
-                    type="email" 
-                    id="email" 
-                    name="email" 
-                    placeholder="Email" 
-                    class="details-input" 
-                    required
-                    aria-required="true"
-                    aria-describedby="email-error"
-                >
-                <span id="email-error" class="error-message" role="alert" aria-live="polite"></span>
+        </div>
+
+        <section class="details-next-steps">
+            <div class="next-steps-container">
+                <h2>What Happens Next?</h2>
+                <div class="next-steps-grid">
+                    <div class="next-step">
+                        <div class="step-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#ff6b35" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <polyline points="12,6 12,12 16,14"/>
+                            </svg>
+                        </div>
+                        <h4>Review</h4>
+                        <p>We carefully review your message and requirements</p>
+                    </div>
+                    <div class="next-step">
+                        <div class="step-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#ff6b35" stroke-width="2">
+                                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                            </svg>
+                        </div>
+                        <h4>Response</h4>
+                        <p>We send you a personalized proposal and timeline</p>
+                    </div>
+                    <div class="next-step">
+                        <div class="step-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#ff6b35" stroke-width="2">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                                <circle cx="9" cy="7" r="4"/>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                            </svg>
+                        </div>
+                        <h4>Discussion</h4>
+                        <p>We discuss details and answer any questions</p>
+                    </div>
+                    <div class="next-step">
+                        <div class="step-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#ff6b35" stroke-width="2">
+                                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                            </svg>
+                        </div>
+                        <h4>Start</h4>
+                        <p>We begin working on bringing your vision to life</p>
+                    </div>
+                </div>
             </div>
-            
-            <button type="submit" class="details-submit-btn" aria-label="Submit your information">
-                <div class="details-submit-bg"></div>
-                <span class="details-submit-text">Submit</span>
-                <span class="details-submit-loader" aria-hidden="true"></span>
-            </button>
-        </form>
+        </section>
     </main>
 
     <script src="../js/script.js"></script>
 </body>
 </html>
+
 
