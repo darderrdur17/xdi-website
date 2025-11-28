@@ -522,8 +522,10 @@ header {
 .hero-section {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    min-height: 100vh;
+    justify-content: center;
+    gap: var(--spacing-lg);
+    min-height: auto;
+    padding: var(--spacing-xl) 0 var(--spacing-lg);
     text-align: center;
     width: 100%;
     position: relative;
@@ -759,7 +761,8 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 2rem 0;
+    padding: 0;
+    margin-top: var(--spacing-lg);
 }
 
 /* Services Preview Section */
@@ -775,6 +778,13 @@ header {
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
     margin: 0 auto;
+}
+
+@media (min-width: 1025px) {
+    .services-section .services-grid {
+        grid-template-columns: repeat(2, minmax(320px, 1fr));
+        max-width: 900px;
+    }
 }
 
 .service-preview-card {
