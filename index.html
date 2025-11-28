@@ -32,7 +32,7 @@
         "contactPoint": {
             "@type": "ContactPoint",
             "contactType": "Customer Service",
-            "url": "https://xdi-website.vercel.app/pages/contact.html"
+            "url": "https://xdi-website.vercel.app/#contact"
         },
         "sameAs": [
             "https://github.com/darderrdur17/xdi-website"
@@ -88,7 +88,7 @@
     </header>
 
     <main class="landing-content" role="main">
-        <section class="hero-section">
+        <section class="hero-section" id="hero">
             <div class="hero-top">
                 <div class="hero-content">
                     <h1 class="main-title">
@@ -101,7 +101,7 @@
                     </p>
 
                     <div class="hero-services-preview">
-                        <a href="pages/service.html" class="hero-service-link">
+                        <a href="#services" class="hero-service-link">
                             <div class="hero-service-item">
                                 <div class="hero-service-icon">
                                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ff6b35" stroke-width="2">
@@ -112,7 +112,7 @@
                             </div>
                         </a>
 
-                        <a href="pages/service.html" class="hero-service-link">
+                        <a href="#services" class="hero-service-link">
                             <div class="hero-service-item">
                                 <div class="hero-service-icon">
                                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ff6b35" stroke-width="2">
@@ -125,7 +125,7 @@
                             </div>
                         </a>
 
-                        <a href="pages/service.html" class="hero-service-link">
+                        <a href="#services" class="hero-service-link">
                             <div class="hero-service-item">
                                 <div class="hero-service-icon">
                                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ff6b35" stroke-width="2">
@@ -136,49 +136,18 @@
                             </div>
                         </a>
                     </div>
+
+                    <div class="hero-cta">
+                        <a href="#contact" class="cta-button hero-primary-btn">
+                            <span>Start Your Project</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14"/>
+                                <path d="m12 5 7 7-7 7"/>
+                            </svg>
+                        </a>
+                    </div>
                 </div>
             </div>
-
-            <nav class="hero-menu-container" aria-label="Main navigation">
-                <div class="dropdown-menu">
-                    <div class="search-bar" id="searchBar" role="search">
-                        <label for="searchInput" class="sr-only">Search navigation</label>
-                        <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                            <circle cx="11" cy="11" r="8"></circle>
-                            <path d="m21 21-4.35-4.35"></path>
-                        </svg>
-                        <input
-                            type="text"
-                            id="searchInput"
-                            placeholder="Explore our services..."
-                            autocomplete="off"
-                            aria-label="Search navigation items"
-                        >
-                        <button
-                            class="clear-btn"
-                            id="clearBtn"
-                            aria-label="Clear search"
-                            style="display: none;"
-                        >
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                                <line x1="18" y1="6" x2="6" y2="18"></line>
-                                <line x1="6" y1="6" x2="18" y2="18"></line>
-                            </svg>
-                        </button>
-                    </div>
-                    <div class="dropdown-content" id="dropdownContent" role="list">
-                        <a href="pages/service.html" class="dropdown-item" role="listitem">
-                            <span class="item-prefix">XDi</span> Services
-                        </a>
-                        <a href="pages/case-study.html" class="dropdown-item" role="listitem">
-                            <span class="item-prefix">XDi</span> Case Studies
-                        </a>
-                        <a href="pages/contact.html" class="dropdown-item" role="listitem">
-                            <span class="item-prefix">XDi</span> Contact
-                        </a>
-                    </div>
-                </div>
-            </nav>
 
             <div class="hero-bottom">
                 <div class="scroll-indicator" aria-hidden="true">
@@ -190,7 +159,94 @@
             </div>
         </section>
 
-        <section class="about-section">
+        <section class="content-section services-section" id="services">
+            <div class="section-header">
+                <p class="section-eyebrow">Our Expertise</p>
+                <h2>Our Services</h2>
+                <p>From strategy to execution, we deliver comprehensive digital solutions that elevate your brand and create unforgettable customer experiences.</p>
+            </div>
+
+            <div class="services-preview">
+                <div class="services-grid">
+                    <div class="service-showcase-card">
+                        <div class="service-showcase-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#ff6b35" stroke-width="2">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                                <line x1="8" y1="21" x2="16" y2="21"/>
+                                <line x1="12" y1="17" x2="12" y2="21"/>
+                            </svg>
+                        </div>
+                        <div class="service-showcase-content">
+                            <h3>UI/UX Design</h3>
+                            <p>Intuitive user experiences through research and thoughtful design.</p>
+                            <ul class="service-features">
+                                <li>User Research</li>
+                                <li>Wireframing &amp; Prototyping</li>
+                                <li>Usability Testing</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="service-showcase-card">
+                        <div class="service-showcase-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#ff6b35" stroke-width="2">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                            </svg>
+                        </div>
+                        <div class="service-showcase-content">
+                            <h3>Brand Identity</h3>
+                            <p>Brand identities that resonate with audiences and communicate value.</p>
+                            <ul class="service-features">
+                                <li>Logo Design</li>
+                                <li>Brand Guidelines</li>
+                                <li>Visual Identity</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="service-showcase-card">
+                        <div class="service-showcase-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#ff6b35" stroke-width="2">
+                                <rect x="3" y="4" width="18" height="12" rx="2"/>
+                                <path d="M7 20h10"/>
+                                <path d="M9 16v4"/>
+                                <path d="M15 16v4"/>
+                            </svg>
+                        </div>
+                        <div class="service-showcase-content">
+                            <h3>Web Development</h3>
+                            <p>Responsive websites that perform across all devices.</p>
+                            <ul class="service-features">
+                                <li>Responsive Design</li>
+                                <li>Performance Optimization</li>
+                                <li>E-commerce Solutions</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="service-showcase-card">
+                        <div class="service-showcase-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#ff6b35" stroke-width="2">
+                                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                                <polyline points="7.5,4.5 16.5,9.5"/>
+                                <polyline points="7.5,9.5 16.5,4.5"/>
+                            </svg>
+                        </div>
+                        <div class="service-showcase-content">
+                            <h3>Digital Strategy</h3>
+                            <p>Strategic planning to help businesses thrive digitally.</p>
+                            <ul class="service-features">
+                                <li>Market Analysis</li>
+                                <li>Growth Strategy</li>
+                                <li>ROI Optimization</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-section" id="why-choose">
             <div class="about-content">
                 <div class="about-text">
                     <h2>Why Choose XDi?</h2>
@@ -241,17 +297,245 @@
             </div>
         </section>
 
+        <section class="content-section case-studies-section" id="case-studies">
+            <div class="section-header">
+                <p class="section-eyebrow">Proven Work</p>
+                <h2>Case Studies</h2>
+                <p>Real results from real projects. Explore how we've helped businesses transform their digital presence and achieve measurable success through customer-centric design.</p>
+            </div>
+
+            <div class="case-studies-grid">
+                <div class="case-study-card">
+                    <div class="case-study-image">
+                        <div class="case-study-placeholder">
+                            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#ff6b35" stroke-width="1.5">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                                <line x1="8" y1="21" x2="16" y2="21"/>
+                                <line x1="12" y1="17" x2="12" y2="21"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="case-study-content">
+                        <div class="case-study-category">Point of Sale System</div>
+                        <h3>ASTRA POS System</h3>
+                        <p>Complete redesign of a restaurant POS system that increased order processing speed by 40% and improved user satisfaction scores by 65%.</p>
+                        <div class="case-study-metrics">
+                            <div class="metric">
+                                <span class="metric-value">40%</span>
+                                <span class="metric-label">Faster Processing</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-value">65%</span>
+                                <span class="metric-label">Higher Satisfaction</span>
+                            </div>
+                        </div>
+                        <div class="case-study-tags">
+                            <span class="tag">UI/UX Design</span>
+                            <span class="tag">Mobile App</span>
+                            <span class="tag">Restaurant Tech</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="case-study-card">
+                    <div class="case-study-image">
+                        <div class="case-study-placeholder">
+                            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#ff6b35" stroke-width="1.5">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="case-study-content">
+                        <div class="case-study-category">E-commerce Platform</div>
+                        <h3>EcoMarket Digital Store</h3>
+                        <p>Built a sustainable e-commerce platform that increased conversion rates by 85% through intuitive design and seamless user experience.</p>
+                        <div class="case-study-metrics">
+                            <div class="metric">
+                                <span class="metric-value">85%</span>
+                                <span class="metric-label">Conversion Increase</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-value">3x</span>
+                                <span class="metric-label">User Engagement</span>
+                            </div>
+                        </div>
+                        <div class="case-study-tags">
+                            <span class="tag">E-commerce</span>
+                            <span class="tag">Web Design</span>
+                            <span class="tag">Sustainability</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="case-study-card">
+                    <div class="case-study-image">
+                        <div class="case-study-placeholder">
+                            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#ff6b35" stroke-width="1.5">
+                                <circle cx="12" cy="12" r="3"/>
+                                <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1 1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="case-study-content">
+                        <div class="case-study-category">FinTech App</div>
+                        <h3>SecureBank Mobile</h3>
+                        <p>Designed a secure banking app that simplified complex financial operations while maintaining top-tier security standards.</p>
+                        <div class="case-study-metrics">
+                            <div class="metric">
+                                <span class="metric-value">50%</span>
+                                <span class="metric-label">Task Completion</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-value">4.8★</span>
+                                <span class="metric-label">App Store Rating</span>
+                            </div>
+                        </div>
+                        <div class="case-study-tags">
+                            <span class="tag">FinTech</span>
+                            <span class="tag">Mobile Design</span>
+                            <span class="tag">Security</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="case-study-card">
+                    <div class="case-study-image">
+                        <div class="case-study-placeholder">
+                            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#ff6b35" stroke-width="1.5">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                                <polyline points="14,2 14,8 20,8"/>
+                                <line x1="16" y1="13" x2="8" y2="13"/>
+                                <line x1="16" y1="17" x2="8" y2="17"/>
+                                <polyline points="10,9 9,9 8,9"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="case-study-content">
+                        <div class="case-study-category">Healthcare Platform</div>
+                        <h3>MediConnect Portal</h3>
+                        <p>Created an intuitive patient portal that improved appointment booking by 70% and enhanced patient-doctor communication.</p>
+                        <div class="case-study-metrics">
+                            <div class="metric">
+                                <span class="metric-value">70%</span>
+                                <span class="metric-label">Booking Increase</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-value">95%</span>
+                                <span class="metric-label">Patient Satisfaction</span>
+                            </div>
+                        </div>
+                        <div class="case-study-tags">
+                            <span class="tag">Healthcare</span>
+                            <span class="tag">Web App</span>
+                            <span class="tag">Patient Portal</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="case-studies-cta">
+                <div class="case-studies-cta-content">
+                    <h2>Ready to Create Your Success Story?</h2>
+                    <p>Let's discuss how we can help transform your business with customer-centric design solutions.</p>
+                    <a href="#contact" class="case-studies-cta-button">
+                        <span>Discuss Your Project</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14"/>
+                            <path d="m12 5 7 7-7 7"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
         <section class="cta-section">
             <div class="cta-content">
                 <h2>Ready to Transform Your Business?</h2>
-                <p>Let's discuss how we can help you achieve your goals with customer-centric solutions.</p>
-                <a href="pages/contact.html" class="cta-button">
-                    <span>Start Your Project</span>
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M5 12h14"/>
-                        <path d="m12 5 7 7-7 7"/>
-                    </svg>
-                </a>
+                <p>Let's discuss how we can help you achieve your goals with customer-centric solutions. Use the contact form below to tell us about your goals.</p>
+            </div>
+        </section>
+
+        <section class="contact-section" id="contact">
+            <div class="contact-hero">
+                <h2>
+                    <span class="title-orange">LET'S</span>
+                    <span class="title-white"> TALK</span>
+                </h2>
+                <p>Ready to bring your vision to life? Let's discuss your project and create something extraordinary together.</p>
+            </div>
+
+            <div class="contact-form-section">
+                <div class="contact-form-container">
+                    <form id="contactForm" class="contact-form-professional" novalidate>
+                        <div class="form-group">
+                            <label for="content" class="form-label">Tell us about your project</label>
+                            <textarea
+                                id="content"
+                                name="content"
+                                placeholder="Tell us about your project..."
+                                class="form-textarea"
+                                required
+                                minlength="10"
+                                rows="6"
+                                aria-required="true"
+                                aria-describedby="content-error"
+                            ></textarea>
+                            <span id="content-error" class="error-message" role="alert" aria-live="polite"></span>
+                        </div>
+
+                        <button type="submit" class="contact-submit-btn" aria-label="Submit your message">
+                            <span class="btn-text">Send Message</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="btn-icon">
+                                <path d="M5 12h14"/>
+                                <path d="m12 5 7 7-7 7"/>
+                            </svg>
+                            <span class="submit-loader" aria-hidden="true"></span>
+                        </button>
+                    </form>
+
+                    <div class="contact-info">
+                        <div class="contact-info-item">
+                            <div class="info-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ff6b35" stroke-width="2">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                    <polyline points="22,6 12,13 2,6"/>
+                                </svg>
+                            </div>
+                            <div class="info-content">
+                                <h4>Quick Response</h4>
+                                <p>We typically respond within 24 hours</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-info-item">
+                            <div class="info-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ff6b35" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <polyline points="12,6 12,12 16,14"/>
+                                </svg>
+                            </div>
+                            <div class="info-content">
+                                <h4>Project Timeline</h4>
+                                <p>Let's discuss your timeline and requirements</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-info-item">
+                            <div class="info-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ff6b35" stroke-width="2">
+                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                                    <circle cx="9" cy="7" r="4"/>
+                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                                </svg>
+                            </div>
+                            <div class="info-content">
+                                <h4>Dedicated Team</h4>
+                                <p>Your project gets our full attention</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
@@ -259,4 +543,3 @@
     <script src="js/script.js"></script>
 </body>
 </html>
-

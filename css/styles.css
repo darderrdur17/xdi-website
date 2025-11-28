@@ -635,14 +635,26 @@ header {
     font-family: var(--font-family-primary);
 }
 
-/* Hero Menu Container */
-.hero-menu-container {
+/* Hero CTA */
+.hero-cta {
     display: flex;
     justify-content: center;
-    align-items: center;
-    flex: 1;
     width: 100%;
-    animation: fadeInUp 0.8s ease-out 1.5s both;
+    margin-top: var(--spacing-xl);
+    animation: fadeInUp 0.8s ease-out 1.2s both;
+}
+
+.hero-primary-btn {
+    font-size: var(--font-size-base);
+    box-shadow:
+        0 15px 45px rgba(255, 107, 53, 0.35),
+        0 5px 15px rgba(0, 0, 0, 0.35);
+}
+
+.hero-primary-btn:hover {
+    box-shadow:
+        0 20px 60px rgba(255, 107, 53, 0.45),
+        0 8px 20px rgba(0, 0, 0, 0.4);
 }
 
 .hero-top {
@@ -706,6 +718,41 @@ header {
 
 .hero-service-link:hover {
     transform: scale(1.05);
+}
+
+.content-section {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    animation: fadeInUp 1s ease-out both;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: calc(var(--spacing-xl) + 1rem);
+}
+
+.section-header h2 {
+    font-size: var(--font-size-4xl);
+    margin-bottom: var(--spacing-sm);
+}
+
+.section-header p {
+    color: var(--color-text-muted);
+    max-width: 720px;
+    margin: 0 auto;
+    line-height: var(--line-height-relaxed);
+}
+
+.section-eyebrow {
+    display: inline-block;
+    font-size: var(--font-size-xs);
+    letter-spacing: var(--letter-spacing-widest);
+    text-transform: uppercase;
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-xs);
+    font-weight: var(--font-weight-semibold);
 }
 
 .hero-bottom {
@@ -1548,6 +1595,11 @@ body.case-study-page {
         gap: var(--spacing-xl);
     }
 
+    .content-section,
+    .contact-section {
+        padding: 0 var(--spacing-sm);
+    }
+
     .hero-section {
         min-height: auto;
         padding: var(--spacing-xl) 0;
@@ -2295,8 +2347,33 @@ body.case-study-page {
 }
 
 /* ============================================
-   CONTACT PAGE STYLES
+   CONTACT STYLES
    ============================================ */
+
+.contact-section {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto 4rem;
+    padding: 0 2rem;
+}
+
+.contact-hero {
+    text-align: center;
+    margin-bottom: var(--spacing-xl);
+}
+
+.contact-hero h2 {
+    font-size: clamp(var(--font-size-3xl), 5vw, var(--font-size-5xl));
+    letter-spacing: var(--letter-spacing-wide);
+    margin-bottom: var(--spacing-sm);
+}
+
+.contact-hero p {
+    color: var(--color-text-muted);
+    max-width: 640px;
+    margin: 0 auto;
+    line-height: var(--line-height-relaxed);
+}
 
 .contact-form-section {
     width: 100%;

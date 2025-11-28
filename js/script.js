@@ -96,108 +96,13 @@ function resetContactForm() {
 }
 
 // ============================================
-// SEARCH FUNCTIONALITY
-// ============================================
-
-const searchInput = document.getElementById('searchInput');
-const clearBtn = document.getElementById('clearBtn');
-const dropdownItems = document.querySelectorAll('.dropdown-item');
-
-// Show/hide clear button
-if (searchInput) {
-    searchInput.addEventListener('input', function() {
-        if (this.value.length > 0) {
-            clearBtn.style.display = 'block';
-            filterMenuItems(this.value);
-        } else {
-            clearBtn.style.display = 'none';
-            showAllMenuItems();
-        }
-    });
-
-    // Keyboard navigation
-    searchInput.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape') {
-            this.value = '';
-            clearBtn.style.display = 'none';
-            showAllMenuItems();
-            this.blur();
-        }
-    });
-}
-
-// Clear search
-if (clearBtn) {
-    clearBtn.addEventListener('click', function() {
-        searchInput.value = '';
-        clearBtn.style.display = 'none';
-        showAllMenuItems();
-        searchInput.focus();
-    });
-}
-
-/**
- * Filter menu items based on search term
- */
-function filterMenuItems(searchTerm) {
-    const term = searchTerm.toLowerCase().trim();
-    let hasResults = false;
-
-    dropdownItems.forEach(item => {
-        const text = item.textContent.toLowerCase();
-        if (text.includes(term)) {
-            item.style.display = 'flex';
-            hasResults = true;
-        } else {
-            item.style.display = 'none';
-        }
-    });
-
-    // Announce results to screen readers
-    const dropdownContent = document.getElementById('dropdownContent');
-    if (dropdownContent) {
-        dropdownContent.setAttribute('aria-label', 
-            hasResults ? `${dropdownItems.length} results found` : 'No results found');
-    }
-}
-
-/**
- * Show all menu items
- */
-function showAllMenuItems() {
-    dropdownItems.forEach(item => {
-        item.style.display = 'flex';
-    });
-}
-
-// Highlight active menu item on hover
-dropdownItems.forEach(item => {
-    item.addEventListener('mouseenter', function() {
-        dropdownItems.forEach(i => i.classList.remove('active'));
-        this.classList.add('active');
-    });
-    
-    item.addEventListener('mouseleave', function() {
-        this.classList.remove('active');
-    });
-
-    // Keyboard navigation
-    item.addEventListener('keydown', function(e) {
-        if (e.key === 'Enter' || e.key === ' ') {
-            e.preventDefault();
-            this.click();
-        }
-    });
-});
-
-// ============================================
 // CONTACT FORM HANDLING
 // ============================================
 
 const contactForm = document.getElementById('contactForm');
 if (contactForm) {
     const contentInput = document.getElementById('content');
-    const submitBtn = contactForm.querySelector('.page-3-submit-btn');
+    const submitBtn = contactForm.querySelector('.contact-submit-btn');
 
     // Real-time validation
     if (contentInput) {
@@ -244,17 +149,14 @@ if (contactForm) {
             return;
         }
 
-        setLoadingState(submitBtn, true);
+        if (submitBtn) {
+            setLoadingState(submitBtn, true);
+        }
 
         try {
             // Get form data
             const formData = new FormData(this);
             const content = formData.get('content').trim();
-
-            // Store content in sessionStorage for next page
-            if (content) {
-                sessionStorage.setItem('contactContent', content);
-            }
 
             // Simulate API call delay for better UX
             await new Promise(resolve => setTimeout(resolve, 500));
@@ -264,7 +166,9 @@ if (contactForm) {
         } catch (error) {
             console.error('Form submission error:', error);
             showError('content', 'An error occurred. Please try again.');
-            setLoadingState(submitBtn, false);
+            if (submitBtn) {
+                setLoadingState(submitBtn, false);
+            }
         }
     });
 }
