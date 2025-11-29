@@ -771,6 +771,8 @@ header {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 2rem;
+    display: flex;
+    justify-content: center;
 }
 
 .services-grid {
@@ -778,6 +780,8 @@ header {
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
     margin: 0 auto;
+    align-items: stretch;
+    width: 100%;
 }
 
 @media (min-width: 1025px) {
@@ -1919,6 +1923,10 @@ body.case-study-page {
 
 .service-showcase-content {
     flex: 1;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
 }
 
 .service-showcase-content h3 {
@@ -2158,7 +2166,8 @@ body.case-study-page {
 .case-studies-more {
     display: flex;
     justify-content: center;
-    margin-top: 1rem;
+    margin-top: 2rem;
+    width: 100%;
 }
 
 .case-studies-more-btn {
@@ -2177,6 +2186,9 @@ body.case-study-page {
     box-shadow: 0 4px 20px rgba(255, 107, 53, 0.3);
     position: relative;
     overflow: hidden;
+    min-width: 220px;
+    justify-content: center;
+    text-transform: uppercase;
 }
 
 .case-studies-more-btn::before {
@@ -2545,7 +2557,7 @@ body.case-study-page {
     position: relative;
     overflow: hidden;
     font-family: var(--font-family-primary);
-    margin-top: var(--spacing-lg);
+    margin: var(--spacing-lg) auto 0;
 }
 
 .contact-submit-btn::before {
