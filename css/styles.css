@@ -768,11 +768,9 @@ header {
 /* Services Preview Section */
 .services-preview {
     width: 100%;
-    max-width: 1200px;
+    max-width: 1050px;
     margin: 0 auto;
     padding: 0 2rem;
-    display: flex;
-    justify-content: center;
 }
 
 .services-grid {
@@ -786,8 +784,8 @@ header {
 
 @media (min-width: 1025px) {
     .services-section .services-grid {
-        grid-template-columns: repeat(3, minmax(280px, 1fr));
-        max-width: 1100px;
+        grid-template-columns: repeat(3, minmax(300px, 1fr));
+        max-width: 100%;
         margin: 0 auto;
     }
 }
@@ -1862,7 +1860,8 @@ body.case-study-page {
 
 .service-showcase-card {
     display: flex;
-    align-items: flex-start;
+    flex-direction: column;
+    align-items: center;
     gap: 2rem;
     padding: 2.5rem;
     background: rgba(30, 30, 30, 0.8);
@@ -1923,7 +1922,8 @@ body.case-study-page {
 
 .service-showcase-content {
     flex: 1;
-    text-align: left;
+    width: 100%;
+    text-align: center;
     display: flex;
     flex-direction: column;
     gap: var(--spacing-sm);
@@ -1948,25 +1948,15 @@ body.case-study-page {
     list-style: none;
     padding: 0;
     margin: 0;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: var(--spacing-sm);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
 }
 
 .service-features li {
     color: var(--color-text);
     font-size: var(--font-size-sm);
     font-weight: var(--font-weight-medium);
-    position: relative;
-    padding-left: 1.5rem;
-}
-
-.service-features li::before {
-    content: '✓';
-    position: absolute;
-    left: 0;
-    color: var(--color-primary);
-    font-weight: var(--font-weight-bold);
 }
 
 .service-cta {
@@ -2166,7 +2156,7 @@ body.case-study-page {
 .case-studies-more {
     display: flex;
     justify-content: center;
-    margin-top: 2rem;
+    margin: 2rem auto 0;
     width: 100%;
 }
 
@@ -2189,6 +2179,7 @@ body.case-study-page {
     min-width: 220px;
     justify-content: center;
     text-transform: uppercase;
+    margin: 0 auto;
 }
 
 .case-studies-more-btn::before {
@@ -2558,6 +2549,7 @@ body.case-study-page {
     overflow: hidden;
     font-family: var(--font-family-primary);
     margin: var(--spacing-lg) auto 0;
+    align-self: center;
 }
 
 .contact-submit-btn::before {
