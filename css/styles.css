@@ -722,6 +722,60 @@ header {
     transform: scale(1.05);
 }
 
+.device-persona-callout {
+    margin-top: var(--spacing-xl);
+    display: flex;
+    justify-content: center;
+}
+
+.device-persona-card {
+    background: rgba(30, 30, 30, 0.65);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: var(--spacing-lg);
+    max-width: 520px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+    transition: transform var(--transition-base), border-color var(--transition-base), box-shadow var(--transition-base);
+}
+
+.device-persona-card + .device-persona-card {
+    margin-left: var(--spacing-lg);
+}
+
+.device-persona-card:hover {
+    border-color: rgba(255, 107, 53, 0.3);
+    transform: translateY(-6px);
+    box-shadow:
+        0 25px 50px rgba(255, 107, 53, 0.15),
+        0 0 0 1px rgba(255, 107, 53, 0.1);
+}
+
+.persona-eyebrow {
+    text-transform: uppercase;
+    letter-spacing: var(--letter-spacing-widest);
+    font-size: var(--font-size-xs);
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-xs);
+    font-weight: var(--font-weight-semibold);
+}
+
+.device-persona-card h3 {
+    font-size: var(--font-size-xl);
+    color: var(--color-text);
+    margin-bottom: var(--spacing-sm);
+}
+
+.device-persona-card p {
+    color: var(--color-text-muted);
+    line-height: var(--line-height-relaxed);
+}
+
+.device-persona-card.persona-mobile {
+    display: none;
+}
+
 .content-section {
     width: 100%;
     max-width: 1200px;
@@ -1575,6 +1629,10 @@ body.case-study-page {
         gap: var(--spacing-xl);
     }
 
+    .device-persona-callout {
+        padding: 0 var(--spacing-sm);
+    }
+
     .services-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: var(--spacing-lg);
@@ -1599,6 +1657,11 @@ body.case-study-page {
 
 /* Mobile Responsive Design */
 @media (max-width: 768px) {
+    .device-persona-callout {
+        margin-top: var(--spacing-lg);
+        padding: 0 var(--spacing-sm);
+    }
+
     header {
         padding: var(--spacing-lg);
     }
@@ -2581,6 +2644,11 @@ body.case-study-page {
     z-index: 2;
 }
 
+.btn-text-mobile {
+    display: none;
+    letter-spacing: var(--letter-spacing-widest);
+}
+
 .contact-submit-btn .btn-icon {
     position: relative;
     z-index: 2;
@@ -2592,6 +2660,29 @@ body.case-study-page {
 }
 
 @media (max-width: 640px) {
+    .device-persona-callout {
+        margin-top: var(--spacing-md);
+        padding: 0 var(--spacing-sm);
+    }
+
+    .device-persona-card.persona-desktop {
+        display: none;
+    }
+
+    .device-persona-card.persona-mobile {
+        display: block;
+        margin-left: 0;
+        max-width: 100%;
+    }
+
+    .btn-text-desktop {
+        display: none;
+    }
+
+    .btn-text-mobile {
+        display: inline;
+    }
+
     .services-preview {
         padding: 0 var(--spacing-sm);
         max-width: 100%;
